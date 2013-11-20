@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package br.com.agds.folhapontoestagiarios;
+package br.com.agds.folhapontoestagiarios.model.entities;
 
 /**
  *
  * @author Notebook
  */
-public class teste {
+public class PontoEstagiario {
     
 }
