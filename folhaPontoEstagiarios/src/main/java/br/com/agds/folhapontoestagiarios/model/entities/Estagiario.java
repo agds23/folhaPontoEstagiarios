@@ -44,7 +44,7 @@ public class Estagiario implements Serializable {
     private Integer matricula;
     
     @OneToOne
-    @JoinColumn(name="fk_lotacao")
+    @JoinColumn(name="fk_lotacao", referencedColumnName = "id_lotacao")
     private Lotacao lotacao;
 
     public Estagiario() {
