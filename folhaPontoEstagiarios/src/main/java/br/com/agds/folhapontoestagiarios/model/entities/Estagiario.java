@@ -6,12 +6,15 @@
 
 package br.com.agds.folhapontoestagiarios.model.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 
 /**
@@ -20,7 +23,8 @@ import javax.persistence.Temporal;
  */
 
 @Entity
-public class Estagiario {
+@Table(name = "estagiario")
+public class Estagiario implements Serializable {
     
     @Id
     @GeneratedValue
@@ -30,15 +34,17 @@ public class Estagiario {
     private String nome;
     
     @Temporal(javax.persistence.TemporalType.DATE)
+    @Column(name="data_de_inicio")
     private Date dataDeInicio;
     
     @Temporal(javax.persistence.TemporalType.DATE)
-    
+    @Column(name="data_de_saida")
     private Date dataDeSaida;
     
     private Integer matricula;
     
     @OneToOne
+    @JoinColumn(name="fk_lotacao")
     private Lotacao lotacao;
 
     public Estagiario() {
