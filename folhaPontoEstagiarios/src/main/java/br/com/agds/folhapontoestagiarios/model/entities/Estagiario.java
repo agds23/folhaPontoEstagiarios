@@ -22,7 +22,6 @@ import javax.persistence.Temporal;
  * @author Notebook
  */
 
-
 @Entity
 @Table(name = "estagiario")
 public class Estagiario implements Serializable {
