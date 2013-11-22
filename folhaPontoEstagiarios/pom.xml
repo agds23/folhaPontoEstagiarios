@@ -22,6 +22,8 @@
         <slf4j-api-version>1.6.1</slf4j-api-version>
         <mysql-connector-java>5.1.27</mysql-connector-java>
         <jstl>1.2</jstl>
+        <c3p0-version>0.9.2.1</c3p0-version>
+        <mchange-commons-java-version>0.2.3.4</mchange-commons-java-version>
     </properties>
 
     <dependencies>
@@ -40,6 +42,32 @@
             <artifactId>commons-fileupload</artifactId>
             <version>${commons-fileupload-version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate-version}</version>
+        </dependency>
+        
+        <!-- ########### HIBERNATE-C3P0 ############ -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>${hibernate-version}</version>
+        </dependency>
+            
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>${c3p0-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>mchange-commons-java</artifactId>
+            <version>${mchange-commons-java-version}</version>
+        </dependency>
+        <!-- ########### HIBERNATE-C3P0 ############ -->
+        
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
